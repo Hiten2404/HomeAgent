@@ -4,6 +4,5 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class AgentHealth(
-    val status: String,
-    val message: String? = null
+    val status: String
 )

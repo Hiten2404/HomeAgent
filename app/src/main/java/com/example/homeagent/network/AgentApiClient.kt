@@ -1,4 +1,3 @@
-
 package com.example.homeagent.network
 
 import com.example.homeagent.data.model.AgentHealth
@@ -22,7 +21,8 @@ class AgentApiClient {
 
     suspend fun getHealth(): Result<AgentHealth> {
         return try {
-            val response = client.get("http://127.0.0.1:3000/health")
+            // Update port to 8080 and path to /health
+            val response = client.get("http://127.0.0.1:8080/health")
             Result.success(response.body())
         } catch (e: Exception) {
             Result.failure(e)
